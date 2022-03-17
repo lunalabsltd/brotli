@@ -310,9 +310,6 @@ int main(int argc, char const* argv[]) {
     if (!ok) exit(1);
   }
 
-  fprintf(stderr, "Number of chunks: %zu; total size: %zu\n", sizes.size(),
-          total);
-
   bool wantDictionary = (dictionaryArg == -1);
   if (method == METHOD_DISTILL || method == METHOD_PURIFY) {
     wantDictionary = false;
