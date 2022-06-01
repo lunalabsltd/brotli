@@ -48,11 +48,11 @@ static void InitEncoderDictionary(BrotliEncoderDictionary* dict) {
 
   dict->hash_table_words = 0;
   dict->hash_table_lengths = 0;
-  dict->buckets = kStaticDictionaryBuckets;
-  dict->dict_words = kStaticDictionaryWords;
+  dict->buckets = 0;
+  dict->dict_words = 0;
 
   dict->cutoffTransformsCount = 0;
-  dict->cutoffTransforms = kCutoffTransforms;
+  dict->cutoffTransforms = 0;
 
   dict->parent = 0;
 
