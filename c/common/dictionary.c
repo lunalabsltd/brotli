@@ -37,14 +37,10 @@ static BrotliDictionary kBrotliDictionary = {
   },
 
   /* data_size ==  sizeof(kBrotliDictionaryData) */
-  0,
+  1,
 
   /* data */
-#if defined(BROTLI_EXTERNAL_DICTIONARY_DATA)
-  NULL
-#else
-  kBrotliDictionaryData
-#endif
+    kBrotliDictionaryData
 };
 
 const BrotliDictionary* BrotliGetDictionary() {
