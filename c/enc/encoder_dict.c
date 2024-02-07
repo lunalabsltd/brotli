@@ -43,16 +43,16 @@ static void BrotliTrieFree(MemoryManager* m, BrotliTrie* trie) {
 
 /* Initializes to RFC 7932 static dictionary / transforms. */
 static void InitEncoderDictionary(BrotliEncoderDictionary* dict) {
-  dict->words = BrotliGetDictionary();
-  dict->num_transforms = (uint32_t)BrotliGetTransforms()->num_transforms;
+  dict->words = 0;
+  dict->num_transforms = 0;
 
-  dict->hash_table_words = kStaticDictionaryHashWords;
-  dict->hash_table_lengths = kStaticDictionaryHashLengths;
-  dict->buckets = kStaticDictionaryBuckets;
-  dict->dict_words = kStaticDictionaryWords;
+  dict->hash_table_words = 0;
+  dict->hash_table_lengths = 0;
+  dict->buckets = 0;
+  dict->dict_words = 0;
 
-  dict->cutoffTransformsCount = kCutoffTransformsCount;
-  dict->cutoffTransforms = kCutoffTransforms;
+  dict->cutoffTransformsCount = 0;
+  dict->cutoffTransforms = 0;
 
   dict->parent = 0;
 

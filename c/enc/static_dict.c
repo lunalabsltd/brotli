@@ -78,6 +78,7 @@ static BROTLI_INLINE BROTLI_BOOL IsMatch(const BrotliDictionary* dictionary,
 static BROTLI_BOOL BrotliFindAllStaticDictionaryMatchesFor(
     const BrotliEncoderDictionary* dictionary, const uint8_t* data,
     size_t min_length, size_t max_length, uint32_t* matches) {
+    return BROTLI_FALSE;
   BROTLI_BOOL has_found_match = BROTLI_FALSE;
 #if defined(BROTLI_EXPERIMENTAL)
   if (dictionary->has_words_heavy) {
